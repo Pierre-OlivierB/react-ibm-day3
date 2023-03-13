@@ -1,7 +1,7 @@
 // Création de composant en créant des classes
 function App() {
   const song = "Chachacha";
-  const numberOfVotes = 150;
+  const numberOfVotes = 149;
   const Button = <button>Vote</button>;
   const disabledButton = <button disabled>Vote</button>;
 
@@ -11,9 +11,9 @@ function App() {
       <a href="https://thinkster.io/tutorials/rendering-variables-in-react">
         Documentation sur le rendu des variables en JSX
       </a>
-      <p></p>
-      <p></p>
-      <p></p>
+      <p>Chanson : {song}</p>
+      <p>Nombre de votes : {numberOfVotes}</p>
+      <p>{numberOfVotes >= 150 ? disabledButton : Button}</p>
     </div>
   );
 }
