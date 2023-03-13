@@ -21,11 +21,18 @@ function App() {
         Documentation sur l'affichage des listes
       </a>
 
-      <p></p>
-      <p></p>
-      <p></p>
-      <p>Notes</p>
-      <div></div>
+      <p className="firstname">{personne.firstname}</p>
+      <p>{personne.lastname}</p>
+      <p className="age">{personne.age}ans</p>
+      <p>
+        Notes :
+        {notes.map((note) => (
+          <p className="note" key={note}>
+            {note}
+          </p>
+        ))}
+      </p>
+      <div>{actionsList}</div>
     </div>
   );
 }
